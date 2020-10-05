@@ -25,5 +25,7 @@ try:
     results    = '\n* Fail : maybe your cookie invalid !!' if (find_token is None) else '\n* Your fb access token : ' + find_token.group(1)
 except requests.exceptions.ConnectionError:
     results    = '\n* Fail : no connection here !!'
+except:
+    results    = '\n* Fail : unknown errors, please try again !!'
 
 print(results)
